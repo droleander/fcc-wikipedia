@@ -1,0 +1,89 @@
+html,
+body {
+  background: -webkit-linear-gradient(top, #010026, #1a0000) fixed;
+  height: 100%;
+  min-width: 320px;
+}
+
+.container {
+  width: 85%;
+}
+
+.align-vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.main p,
+a,
+a:hover,
+a:visited,
+input {
+  color: #fff;
+}
+
+#lnkRandomArticle,
+.btn:hover {
+  background: transparent;
+  border: 1px solid #ffbe6f;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+}
+
+#txtSearch {
+  background: #010026;
+  border: 5px solid #ffbe6f;
+  border-radius: 50px;
+  margin: 25px auto;
+  outline: none;
+  padding: 10px;
+  height: 40px;
+  width: 280px;
+  transition: .5s;
+}
+
+.section {
+  padding-bottom: 15px;
+}
+
+article {
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 5px 30px;
+}
+
+article:hover {
+  border-left: 5px solid #ffbe6f;
+  margin-left: -5px;
+}
+
+article a,
+article p,
+article a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+article h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.footer {
+  color: #fff;
+  text-align: center;
+
+}
+
+.align-vertical-bottom {
+  position: relative;
+  top: 70%;
+  transform: translateY(-70%);
+  -ms-transform: translateY(-70%);
+  -webkit-transform: translateY(-70%);  
+}
