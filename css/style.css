@@ -77,7 +77,6 @@ article h1 {
 .footer {
   color: #fff;
   text-align: center;
-
 }
 
 .align-vertical-bottom {
@@ -85,5 +84,5 @@ article h1 {
   top: 70%;
   transform: translateY(-70%);
   -ms-transform: translateY(-70%);
-  -webkit-transform: translateY(-70%);  
+  -webkit-transform: translateY(-70%);
 }
