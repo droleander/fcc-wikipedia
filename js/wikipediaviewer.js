@@ -1,62 +1,61 @@
-function enableInput() {
-  $("#txtSearch").css("width", "280px");
-  $("#txtSearch").removeAttr("placeholder");
-  $("#instruction").html("Press ENTER to search");
-}
-
-function getArticle() {
-  var baseAPI = 'https://en.wikipedia.org/w/api.php?action=query';
-  var strSearch = $("#txtSearch").change().val().trim();
-  if (strSearch === "") {
-    alert('The search box is empty. There is nothing to search...');
-    return;
-  } else {
-    $.ajax({
-      url: baseAPI,
-      dataType: 'jsonp',
-      data: {
-        'format': 'json',
-        'prop': 'extracts',
-        'generator': 'search',
-        'exsentences': '2',
-        'exlimit': '10',
-        'exintro': '1',
-        'explaintext': '1',
-        'gsrsearch': strSearch,
-      },
-      success: function (wikiResult) {
-        displayArticle(wikiResult);
-      }
-    });
-  }
-  $(".main").removeClass("align-vertical-center");
-  $(".main").css("margin-top", "50px");
-  $(".footer").removeClass("align-vertical-bottom");
-  $("#instruction").html("Refresh to go back to main page");
-}
-
-function displayArticle(wikiResult) {
-  var pageIDs = Object.keys(wikiResult.query.pages);
-  pageIDs.forEach(function (pageID) {
-    var articleTitle = wikiResult.query.pages[pageID].title;
-    var articleDesc = wikiResult.query.pages[pageID].extract;
-    var articleLink = 'https://en.wikipedia.org/?curid=' + pageID;
-    var articleHTML = '<article>';
-    articleHTML += '<a href="' + articleLink + '" target="_blank">';
-    articleHTML += '<h1>' + articleTitle + '</h1>';
-    articleHTML += '<p>' + articleDesc + '</p>';
-    articleHTML += '</a>';
-    articleHTML += '</article>';
-    $(articleHTML).appendTo(".section-container");
+function getArticle(txtSearch) {
+  $.ajax({
+    url: 'https://en.wikipedia.org/w/api.php?action=query',
+    dataType: 'jsonp',
+    data: {
+      'format': 'json',
+      'prop': 'extracts',
+      'generator': 'search',
+      'exsentences': '2',
+      'exlimit': '10',
+      'exintro': '1',
+      'explaintext': '1',
+      'gsrsearch': txtSearch
+    },
+    success: wikiResult => getArticleDetails(wikiResult)
   });
 }
 
-$(document).ready(function () {
-  $("#txtSearch").css("width", "90px");
-  $("#txtSearch").on("keydown", function (event) {
+function getArticleDetails(wikiResult) {
+  let wikiPages = wikiResult.query.pages;
+  let pageIDs = Object.keys(wikiPages);
+  
+  pageIDs.forEach(pageID => {
+    let articleTitle = wikiPages[pageID].title;
+    let articleDesc = wikiPages[pageID].extract;
+    let articleLink = `https://en.wikipedia.org/?curid=${pageID}`;
+    
+    renderArticle(articleTitle, articleDesc, articleLink);
+  });
+}
+
+function renderArticle(articleTitle, articleDesc, articleLink) {
+  let articleHTML = `
+    <div class="card article-item">
+      <a href="${articleLink}" target="_blank">
+        <h2 class="card-header">${articleTitle}</h2>
+        <div class="card-body">
+          <p class="card-text">${articleDesc}</p>
+        </div>
+      </a>
+    </div>`
+  
+  showArticle(articleHTML);
+}
+
+function showArticle(articleHTML) {
+  $(".articles-container").append(articleHTML);
+}
+
+$(document).ready(function () {  
+  $("#searchbox").on("click", function () {
+    $(this).removeAttr("placeholder");
+  });
+  $("#searchbox").on("keydown", function (event) {
+    let txtSearch = $(this).change().val().trim();
     if (event.which === 13) {
-      $(".section-container").empty();
-      getArticle();
+      $(".articles-container").empty();
+      txtSearch !== "" ? getArticle(txtSearch) : alert("Search box is empty...");
     }
   });
 });
