@@ -4,6 +4,7 @@ html {
 
 body {
   background: -webkit-linear-gradient(#010026, #1a0000) fixed;
+  background: linear-gradient(#010026, #1a0000) fixed;
   margin-bottom: 60px; }
 
 #bttn-random-article:hover {
@@ -36,7 +37,7 @@ body {
     text-decoration: none; }
 
 footer {
-  background: #fff;
+  background: #8f8cff;
   position: absolute;
   bottom: 0;
   width: 100%;
