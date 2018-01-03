@@ -3,7 +3,6 @@ html {
   min-height: 100%; }
 
 body {
-  background: -webkit-linear-gradient(#010026, #1a0000) fixed;
   background: linear-gradient(#010026, #1a0000) fixed;
   margin-bottom: 60px; }
 
