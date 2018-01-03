@@ -3,7 +3,7 @@ html {
   min-height: 100%; }
 
 body {
-  background: linear-gradient(#010026, #1a0000) fixed;
+  background: linear-gradient(#0000ff, #00ffff) fixed;
   margin-bottom: 60px; }
 
 #bttn-random-article:hover {
@@ -15,7 +15,7 @@ body {
   text-decoration: none; }
 
 #searchbox {
-  background: #010026;
+  background: #0000ff;
   border: 5px solid #ffbe6f;
   border-radius: 50px;
   color: #fff;
@@ -36,7 +36,7 @@ body {
     text-decoration: none; }
 
 footer {
-  background: #8f8cff;
+  background: #ccffff;
   position: absolute;
   bottom: 0;
   width: 100%;
