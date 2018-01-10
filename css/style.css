@@ -4,7 +4,7 @@ html {
 
 body {
   background: linear-gradient(#0000ff, #00ffff) fixed;
-  margin-bottom: 100px; }
+  margin-bottom: 80px; }
 
 /***** #search-section *****/
 #search-section h1 {
@@ -25,7 +25,7 @@ footer {
   background: #fff;
   bottom: 0;
   display: flex;
-  height: 100px;
+  height: 80px;
   position: absolute;
   width: 100%; }
   footer p {
