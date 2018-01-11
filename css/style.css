@@ -1,16 +1,17 @@
 html {
-  position: relative;
-  min-height: 100%; }
+  background: -webkit-linear-gradient(#4d4dff, #00cdcd) fixed;
+  min-height: 100%;
+  position: relative; }
 
 body {
+  background: transparent;
   font-family: "Roboto Condensed", sans-serif;
-  background: -webkit-linear-gradient(#4d4dff, #00cdcd) fixed;
   margin-bottom: 60px; }
 
 /***** #search-section *****/
 #search-section h1 {
-  font-family: "Righteous", cursive;
   color: #ffffff;
+  font-family: "Righteous", cursive;
   text-align: center;
   text-transform: uppercase; }
 
