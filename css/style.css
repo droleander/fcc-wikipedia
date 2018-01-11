@@ -5,12 +5,13 @@ html {
 body {
   font-family: "Roboto Condensed", sans-serif;
   background: -webkit-linear-gradient(#4d4dff, #00cdcd) fixed;
-  margin-bottom: 80px; }
+  margin-bottom: 60px; }
 
 /***** #search-section *****/
 #search-section h1 {
   font-family: "Righteous", cursive;
   color: #ffffff;
+  text-align: center;
   text-transform: uppercase; }
 
 /***** #articles-section *****/
@@ -22,15 +23,16 @@ body {
 /***** #footer-section *****/
 footer {
   align-items: center;
-  background: #fff;
+  background: #f1f1f1;
   bottom: 0;
   color: #3c3c3c;
   display: flex;
   font-family: "Righteous", cursive;
-  height: 80px;
+  height: 60px;
   position: absolute;
   width: 100%; }
   footer p {
+    line-height: normal;
     margin: auto;
     text-align: center; }
   footer a {
