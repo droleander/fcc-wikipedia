@@ -1,25 +1,41 @@
 html {
-  background: linear-gradient(#4d4dff, #00cdcd) fixed;
   min-height: 100%;
   position: relative; }
 
 body {
-  background: transparent;
+  background: linear-gradient(#4d4dff, #00cdcd) fixed;
   font-family: "Roboto Condensed", sans-serif;
   margin-bottom: 60px; }
 
 /***** #search-section *****/
-#search-section h1 {
-  color: #ffffff;
-  font-family: "Righteous", cursive;
-  text-align: center;
-  text-transform: uppercase; }
+#search-section .col {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  #search-section .col h1 {
+    color: #ffffff;
+    font-family: "Righteous", cursive;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase; }
+  #search-section .col #bttn-random-article {
+    background: #00cdcd;
+    color: #ffffff;
+    margin: 10px auto; }
+    #search-section .col #bttn-random-article:hover {
+      background: #ffff4d;
+      color: #3c3c3c; }
 
 /***** #articles-section *****/
-#articles-section .article-item {
-  margin-bottom: 10px; }
-  #articles-section .article-item:hover a {
-    text-decoration: none; }
+#articles-section {
+  padding: 10px 0; }
+  #articles-section .article-item:nth-of-type(n+2) {
+    margin-top: 10px; }
+  #articles-section .article-item:hover {
+    border-left: 5px solid #ffff4d;
+    margin-left: -4px; }
+    #articles-section .article-item:hover a {
+      text-decoration: none; }
 
 /***** #footer-section *****/
 footer {
