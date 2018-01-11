@@ -3,7 +3,7 @@ html {
   position: relative; }
 
 body {
-  background: linear-gradient(#4d4dff, #00cdcd) fixed;
+  background: -webkit-linear-gradient(#4d4dff, #00cdcd) fixed;
   font-family: "Roboto Condensed", sans-serif;
   margin-bottom: 60px; }
 
