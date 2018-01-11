@@ -1,5 +1,5 @@
 html {
-  background: -webkit-linear-gradient(#4d4dff, #00cdcd) fixed;
+  background: linear-gradient(#4d4dff, #00cdcd) fixed;
   min-height: 100%;
   position: relative; }
 
