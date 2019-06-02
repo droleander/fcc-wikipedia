@@ -18,34 +18,45 @@ body {
 #search-section {
   background: transparent;
   color: #ffffff;
+  padding: 0;
   text-align: center; }
+  #search-section p {
+    margin: auto;
+    padding: 0; }
   #search-section h1 {
     font-family: "Righteous", cursive;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin: 2rem auto; }
   #search-section #bttn-random-article {
     background: #00cdcd;
     color: #ffffff;
-    margin: 10px auto; }
+    margin: 2rem auto; }
     #search-section #bttn-random-article:hover {
       background: #ffff4d;
       color: #3c3c3c; }
   #search-section #searchbox {
-    color: #3c3c3c; }
+    color: #3c3c3c;
+    margin: auto;
+    width: 250px; }
 
 #articles-section {
   flex: 1 0 auto; }
-  #articles-section .article-item:nth-child(even) {
-    margin: 32px 0; }
-  #articles-section .article-item:hover {
-    border-left: 5px solid #ffff4d;
-    margin-left: -4px; }
-    #articles-section .article-item:hover a {
-      text-decoration: none; }
+  #articles-section .article-item {
+    border-radius: 10px; }
+    #articles-section .article-item:nth-child(even) {
+      margin: 1rem 0; }
+    #articles-section .article-item:hover {
+      border-left: 5px solid #ffff4d;
+      border-right: 5px solid #ffff4d;
+      margin-left: -4px;
+      margin-right: -4px; }
+      #articles-section .article-item:hover a {
+        text-decoration: none; }
 
 #footer-section {
   color: #3c3c3c;
   flex-shrink: 0;
-  padding: 16px 0 32px;
+  margin: 1rem auto;
   text-align: center; }
   #footer-section p {
     margin: auto; }
