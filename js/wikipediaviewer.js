@@ -2,6 +2,7 @@ function getArticle(txtSearch) {
 	$.ajax({
 		url: 'https://en.wikipedia.org/w/api.php?action=query',
 		dataType: 'jsonp',
+		crossDomain: true,
 		data: {
 			'format': 'json',
 			'prop': 'extracts',
